@@ -3,7 +3,7 @@ import mongoose, { Schema, Document, Model } from 'mongoose';
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/infodisclosure')
   .then(() => console.log('Connected to MongoDB'))
-  .catch(err => console.error('Error connecting to MongoDB:', err));
+  .catch((err: any) => console.error('Error connecting to MongoDB:', err));
 
 // Define an interface for the User document
 interface IUser extends Document {
